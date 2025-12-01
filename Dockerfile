@@ -29,5 +29,5 @@ ENV PATH="/app/.venv/bin:$PATH"
 COPY frontend ./frontend
 COPY backend ./backend
 
-EXPOSE 8501
-CMD ["streamlit", "run", "frontend/app.py", "--server.address=0.0.0.0"]
+EXPOSE 7860
+CMD ["streamlit", "run", "frontend/app.py", "--server.address=0.0.0.0", "--server.port", "7860"]
