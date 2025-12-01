@@ -11,4 +11,8 @@ dependencies = [
     "plotly>=6.5.0",
     "pypdf>=6.4.0",
     "streamlit>=1.51.0",
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "python-multipart>=0.0.9",
+    "pydantic-settings>=2.0.0",
 ]

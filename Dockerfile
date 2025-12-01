@@ -21,7 +21,8 @@ WORKDIR /app
 COPY --from=builder /app/.venv /app/.venv
 ENV PATH="/app/.venv/bin:$PATH"
 
-COPY app.py .
+COPY frontend ./frontend
+COPY backend ./backend
 
 EXPOSE 8501
-CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "frontend/app.py", "--server.address=0.0.0.0"]
