@@ -18,4 +18,4 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git push https://Arif-Badhon:$HF_TOKEN@huggingface.co/spaces/Arif-Badhon/FinanceRisk master
+          git push https://Arif-Badhon:$HF_TOKEN@huggingface.co/spaces/Arif-Badhon/FinanceRisk2 master
