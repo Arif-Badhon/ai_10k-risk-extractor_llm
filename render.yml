@@ -1,0 +1,19 @@
+services:
+  # Backend API
+  - type: web
+    name: risk-extractor-backend
+    env: docker
+    dockerfilePath: ./Dockerfile  # your backend Dockerfile
+    envVars:
+      - key: MODEL_RUNNER_URL
+        value: https://your-ollama-endpoint.com/v1  # External LLM
+      - key: PORT
+        value: 8000
+    healthCheckPath: /health
+
+  # Frontend (if separate)
+  - type: web
+    name: risk-extractor-frontend
+    env: static  # or docker if using React/Vue
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
